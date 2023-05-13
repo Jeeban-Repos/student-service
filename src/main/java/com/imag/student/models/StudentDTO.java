@@ -1,10 +1,15 @@
 package com.imag.student.models;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class StudentDTO {
 
-//	private String student_id;
+	private String student_id;
+	@NotBlank(message = "First Name is mandatory")
 	private String student_first_name;
+	@NotBlank(message = "Last Name is mandatory")
 	private String student_last_name;
+	@NotBlank(message = "Date of Birth mandatory")
 	private String date_of_birth;
 	private String section;
 	private String gender;
@@ -15,13 +20,13 @@ public class StudentDTO {
 	private double average;
 	private String result;
 
-//	public String getStudent_id() {
-//		return student_id;
-//	}
-//
-//	public void setStudent_id(String student_id) {
-//		this.student_id = student_id;
-//	}
+	public String getStudent_id() {
+		return student_id;
+	}
+
+	public void setStudent_id(String student_id) {
+		this.student_id = student_id;
+	}
 
 	public String getStudent_first_name() {
 		return student_first_name;

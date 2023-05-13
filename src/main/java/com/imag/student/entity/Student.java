@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "student")
@@ -16,13 +15,10 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private String studentId;
 	@Column
-	@NotBlank(message = "First Name is mandatory")
 	private String studentfirstname;
 	@Column
-	@NotBlank(message = "Last Name is mandatory")
 	private String studentlastname;
 	@Column
-	@NotBlank(message = "Date of Birth mandatory")
 	private String dateofbirth;
 	@Column
 	private String section;
